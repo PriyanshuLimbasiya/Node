@@ -62,15 +62,44 @@
             border-radius: 10px;
             background-color: white;
         }
+
+        #errorid {
+            color: red;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        /* Styling for suggestions */
+        .suggestions-list {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            background: black;
+            position: absolute;
+
+            list-style-type: none;
+            padding: 0;
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+
+
+        .suggestions-list li:hover {
+            background-color: yellowgreen;
+        }
     </style>
-    <title>Pokémon Search</title>
+    <title>pokemonimage</title>
 </head>
 
 <body>
     <div class="container-fluid">
-        <input type="text" id="pokemonname" class="form-control" placeholder="Enter Pokémon Name to Get Details">
+        <input type="text" id="pokemonname" class="form-control" placeholder="Enter Pokémon Name">
+        <ul id="suggestions" class="suggestions-list"></ul>
         <button onclick="pokemon()" class="btn btn-secondary">Search Pokémon</button>
         <img src="" id="pokemonimage" alt="Pokémon Image" style="display: none;">
+        <p id="errorid"></p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
